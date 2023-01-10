@@ -8,7 +8,10 @@ import { AppHeader,
   DesignComplement,
   SubTitle,
   AppFooter,
-  AppContent
+  AppContent,
+  HeaderTitle,
+  AppAsideHeader,
+  AppAsideContent
 } from "./AppStyle";
 import "./styles/global.css";
 
@@ -37,14 +40,24 @@ function App() {
 
   return (
     <AppContainer>
+
       <AppHeader>
-          <TitleArea> 1 </TitleArea>
+          <TitleArea> 
+            <HeaderTitle> GDTarget </HeaderTitle>
+          </TitleArea>
           <SectionArea> 
               <DesignComplement />
               <SubTitle> vento </SubTitle> 
           </SectionArea>
       </AppHeader>
-      <AppAside>aside</AppAside>
+
+      <AppAside>
+        <AppAsideHeader> ACTIVITY LOG </AppAsideHeader>
+        <AppAsideContent> 
+        
+        </AppAsideContent>
+      </AppAside>
+
       <AppMain> 
         <AppContent>
 
@@ -53,6 +66,7 @@ function App() {
 
         </AppFooter>
       </AppMain>
+      
     </AppContainer>
   );
 }

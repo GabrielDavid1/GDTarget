@@ -17,7 +17,17 @@ export const AppHeader = styled.header`
 
 export const TitleArea = styled.div`
     width: 15%;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: end;
+    color: ${theme.fonts.HEADER_TITLE.color}; 
     background-color: ${theme.colors.HEADER};
+    font-size: ${theme.fonts.HEADER_TITLE.size};
+`;
+
+export const HeaderTitle = styled.h2`
+    font-family: 'Roboto', sans-serif;
 `;
 
 export const SectionArea = styled.section`
@@ -43,6 +53,22 @@ export const AppAside = styled.aside`
     width: 13.12%;
     height: 100%;
     background-image: ${theme.colors.ASIDE};
+`;
+
+export const AppAsideHeader = styled.div`
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Inter', sans-serif;
+    color: ${theme.fonts.ACTIVITY_TITLE.color};
+    font-size: ${theme.fonts.ACTIVITY_TITLE.size};
+`;
+
+export const AppAsideContent = styled.div`
+    width: 100%;
+    height: 90%;
 `;
 
 export const AppMain = styled.main`

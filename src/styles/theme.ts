@@ -7,12 +7,11 @@ export const theme = {
     fonts: {
         HEADER_TITLE: {
             color: '#FFFFFF',
-            size: '2rem',
-            style: 'bold'
+            size: '1.2rem'
         },
         ACTIVITY_TITLE: {
-            color: '#626262',
-            size: '1.5rem'
+            color: '#353333',
+            size: '1rem'
         },
         WIND_TITLE: {
             color: '#4D4D4D',
