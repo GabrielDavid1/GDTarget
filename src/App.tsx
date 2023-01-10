@@ -1,20 +1,25 @@
-import { useReducer } from 'react'
-import ButtonComponent from "./components/ButtonComponent";
+import { useReducer } from "react";
+import { AppHeader, 
+  AppContainer, 
+  AppAside, 
+  AppMain 
+} from "./styles";
+import "./global.css";
 
-function init(initialCount:number) {  
+function init(initialCount: number) {
   return {
     count: initialCount,
   };
 }
 
-function reducer(state:any, action:any) {
+function reducer(state: any, action: any) {
   switch (action.type) {
-    case 'increment':
-      return {count: state.count + 1};
-    case 'decrement':
-      return {count: state.count - 1};
-    case 'reset':      
-      return init(action.payload);    
+    case "increment":
+      return { count: state.count + 1 };
+    case "decrement":
+      return { count: state.count - 1 };
+    case "reset":
+      return init(action.payload);
     default:
       throw new Error();
   }
@@ -25,22 +30,12 @@ function App() {
   const [state, dispatch] = useReducer(reducer, initialCount, init);
 
   return (
-    <div className="main">
-      <b >Contador: {state.count}</b> 
-      <ButtonComponent 
-        param={{type: "increment"}} 
-        alterar={dispatch} 
-      />
-      <ButtonComponent 
-        param={{type: 'reset', payload: initialCount}}
-        alterar={dispatch} 
-      />
-      <ButtonComponent 
-        param={{type: "decrement"}}
-        alterar={dispatch} 
-      />
-    </div>
+    <AppContainer>
+      <AppHeader>header</AppHeader>
+      <AppAside className="aside">aside</AppAside>
+      <AppMain className="main"> Conteúdo </AppMain>
+    </AppContainer>
   );
 }
 
-export default App
+export default App;
