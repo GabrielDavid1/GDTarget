@@ -2,7 +2,13 @@ import { useReducer } from "react";
 import { AppHeader, 
   AppContainer, 
   AppAside, 
-  AppMain 
+  AppMain, 
+  TitleArea,
+  SectionArea,
+  DesignComplement,
+  SubTitle,
+  AppFooter,
+  AppContent
 } from "./AppStyle";
 import "./styles/global.css";
 
@@ -31,9 +37,22 @@ function App() {
 
   return (
     <AppContainer>
-      <AppHeader>header</AppHeader>
-      <AppAside className="aside">aside</AppAside>
-      <AppMain className="main"> Conteúdo </AppMain>
+      <AppHeader>
+          <TitleArea> 1 </TitleArea>
+          <SectionArea> 
+              <DesignComplement />
+              <SubTitle> vento </SubTitle> 
+          </SectionArea>
+      </AppHeader>
+      <AppAside>aside</AppAside>
+      <AppMain> 
+        <AppContent>
+
+        </AppContent>
+        <AppFooter>
+
+        </AppFooter>
+      </AppMain>
     </AppContainer>
   );
 }
