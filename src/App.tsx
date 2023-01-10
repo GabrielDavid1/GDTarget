@@ -1,4 +1,7 @@
+//React
 import { useReducer } from "react";
+
+//Styles
 import { AppHeader, 
   AppContainer, 
   AppAside, 
@@ -14,6 +17,9 @@ import { AppHeader,
   AppAsideContent
 } from "./AppStyle";
 import "./styles/global.css";
+
+//Components
+import Card from "./components/Card/Card";
 
 function init(initialCount: number) {
   return {
@@ -54,7 +60,13 @@ function App() {
       <AppAside>
         <AppAsideHeader> ACTIVITY LOG </AppAsideHeader>
         <AppAsideContent> 
-        
+     
+            <Card index={0} text="Testando kkkk Testando kkkk Testando kkkk" />
+            <Card index={1} text="Testando kkkk Testando kkkk Testando kkkk" />
+            <Card index={2} text="Testando kkkk Testando kkkk Testando kkkk" />
+            <Card index={3} text="Testando kkkk Testando kkkk Testando kkkk" />
+            <Card index={4} text="Testando kkkk Testando kkkk Testando kkkk" />
+ 
         </AppAsideContent>
       </AppAside>
 
@@ -66,7 +78,7 @@ function App() {
 
         </AppFooter>
       </AppMain>
-      
+
     </AppContainer>
   );
 }
