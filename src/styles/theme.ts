@@ -37,5 +37,18 @@ export const theme = {
             color: '#424242',
             size: '1rem'
         }
+    },
+    elements: {
+        CARD: {
+            color: '#F1FBFD'
+        },
+        PROGRESS_BAR: {
+            color: '#FF6060'
+        },
+        AI_ENEMY: {
+            color: '#7886FF',
+            border: '1px solid #9CA4EE',
+            text_color: '#2D33CB'
+        }
     }
 };
