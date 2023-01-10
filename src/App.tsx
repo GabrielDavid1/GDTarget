@@ -3,8 +3,8 @@ import { AppHeader,
   AppContainer, 
   AppAside, 
   AppMain 
-} from "./styles";
-import "./global.css";
+} from "./AppStyle";
+import "./styles/global.css";
 
 function init(initialCount: number) {
   return {
