@@ -83,7 +83,7 @@ export const AppAsideContent = styled.div`
 `;
 
 export const AppMain = styled.main`
-    width: 86.8%;
+    width: 86.88%;
     height: 100%;
 `;
 
@@ -115,7 +115,18 @@ export const MainDescriptionArea = styled.main`
 export const MainPlayers = styled.main`
     width: 100%;
     height: 33.33%;
-    background-color: purple;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-content: center;
+`;
+
+export const PlayerArea = styled.main`
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 `;
 
 export const AppFooter = styled.main`

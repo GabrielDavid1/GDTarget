@@ -19,6 +19,7 @@ import {
   MainPowerBar,
   MainDescriptionArea,
   MainPlayers,
+  PlayerArea,
 } from "./AppStyle";
 import "./styles/global.css";
 
@@ -27,6 +28,7 @@ import Card from "./components/Card/Card";
 import { Wind } from "./components/Wind";
 import PowerBar from "./components/PowerBar";
 import Description from './components/Description';
+import PlayerComponent from './components/Player';
 
 function App() {
   const [power, setPower] = useState<number>(0);
@@ -39,7 +41,7 @@ function App() {
         </TitleArea>
         <SectionArea>
           <DesignComplement />
-          <SubTitle> {Wind(1)} </SubTitle>
+          <SubTitle> {Wind(0)} </SubTitle>
         </SectionArea>
       </AppHeader>
 
@@ -77,7 +79,7 @@ function App() {
       <AppMain>
         <AppContent>
           <MainPowerBar> 
-            <PowerBar value={power} isVisible />
+            <PowerBar value={power} isVisible={false} />
           </MainPowerBar>
 
           <MainDescriptionArea> 
@@ -85,7 +87,20 @@ function App() {
           </MainDescriptionArea>
 
           <MainPlayers> 
-            players 
+            <PlayerArea>
+              <PlayerComponent
+                percent_life="100%"
+                stylePlayer={{
+                  playerTextColor:'#565707',
+                  playerBgColor:'#FEFFB9',
+                  playerBorderColor:'#FCFF5A',
+                }}
+              />
+              <PlayerComponent
+                percent_life="100%"
+                stylePlayer={undefined}
+              />
+            </PlayerArea> 
           </MainPlayers>
         </AppContent>
         <AppFooter></AppFooter>
