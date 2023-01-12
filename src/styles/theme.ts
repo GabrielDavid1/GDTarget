@@ -48,6 +48,9 @@ export const theme = {
             color: '#7886FF',
             border: '#9CA4EE',
             text_color: '#2D33CB'
-        }
+        },
+        RANGE: {
+            color: '#F9BCBC'
+        },
     }
 };

@@ -59,7 +59,7 @@ export const AppAside = styled.aside`
     height: 100%;
     background-image: ${theme.colors.ASIDE};
     position: relative;
-    z-index: 1;
+    z-index: 2;
 `;
 
 export const AppAsideHeader = styled.div`
@@ -133,4 +133,6 @@ export const AppFooter = styled.main`
     width: 100%;
     height: 15%;
     background-color: #FFFFFF;
+    position: relative;
+    z-index: 1;
 `;

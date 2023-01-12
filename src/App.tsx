@@ -32,7 +32,7 @@ import PlayerComponent from './components/Player';
 
 function App() {
   const [power, setPower] = useState<number>(0);
-  const [toggle, setToggle] = useState<boolean>(false);
+  const [toggle, setToggle] = useState<boolean>(true);
   return (
     <AppContainer>
       <AppHeader>

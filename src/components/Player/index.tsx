@@ -1,3 +1,4 @@
+import RangeArea from "./Range";
 import { PlayerContainer } from "./styles";
 
 interface StylePlayerProps {
@@ -13,8 +14,11 @@ interface Props {
 
 export default function PlayerComponent({ percent_life, stylePlayer }:Props) {
     return (
-        <PlayerContainer stylePlayer={stylePlayer}>
-            {percent_life}
-        </PlayerContainer>
-    )
+        <>
+         <PlayerContainer stylePlayer={stylePlayer}>
+             {percent_life}
+         </PlayerContainer>
+         {stylePlayer ? <RangeArea /> : null}
+        </>
+    );
 }

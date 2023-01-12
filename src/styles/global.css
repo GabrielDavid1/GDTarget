@@ -1,27 +1,49 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&family=Roboto+Mono&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&family=Roboto:wght@900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter&family=Raleway:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Raleway:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&family=Roboto+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&family=Roboto:wght@900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Raleway:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Raleway:wght@300&display=swap");
 
 body {
   margin: 0 auto;
   overflow: hidden;
 }
 
+.inclination {
+  cursor:pointer;
+}
+
 @keyframes show-up {
   0% {
-      transform: translateX(1000px);
+    transform: translateX(1000px);
   }
   100% {
-      transform: translateX(0);
+    transform: translateX(0);
   }
 }
 
 @keyframes disappear {
   0% {
-      transform: translateX(0);
+    transform: translateX(0);
   }
   100% {
-      transform: translateX(-1000px);
+    transform: translateX(-1000px);
+  }
+}
+
+@keyframes range {
+  0% {
+    background-color:#ff3b3b8a;
+    box-shadow: 0px 2px 4px -1px #ffc7c7, 0px 4px 5px 0px #f39c9c,
+      0px 1px 10px 0px #ec7c7c;
+  }
+  50% {
+    background-color:#ff3b3b33;
+    box-shadow: 0px 2px 4px -1px #eb9898, 0px 4px 5px 0px #d47d7d,
+      0px 1px 10px 0px #963a3a;
+  }
+  100% {
+    background-color:#ff3b3b00;
+    box-shadow: 0px 2px 4px -1px #ffc7c7, 0px 4px 5px 0px #f39c9c,
+      0px 1px 10px 0px #ec7c7c;
   }
 }

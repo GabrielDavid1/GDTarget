@@ -9,7 +9,7 @@ export default function Description() {
   const [closeComponent, setCloseComponent] = useState<boolean>(false);
 
   const waitTime = (type: string) => {
-    const time = (type === "end-animation") ? 250 : 500;
+    const time = (type === "end-animation") ? 250 : 800;
     setTimeout(() => {
       (type === "closing-component") 
         ? setCloseComponent(true) 

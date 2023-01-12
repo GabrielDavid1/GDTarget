@@ -34,4 +34,5 @@ export const PlayerContainer = styled.div<Props>`
     border-top-left-radius: ${({ stylePlayer }) => `${
         (stylePlayer) ? '0px' : '25px'
     }` };
+    z-index:1;
 `;
