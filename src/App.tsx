@@ -1,3 +1,6 @@
+//React
+import { useState } from 'react';
+
 //Styles
 import {
   AppHeader,
@@ -22,8 +25,10 @@ import "./styles/global.css";
 //Components
 import Card from "./components/Card/Card";
 import { Wind } from "./components/Wind";
+import PowerBar from "./components/PowerBar";
 
 function App() {
+  const [power, setPower] = useState<number>(0);
   return (
     <AppContainer>
       <AppHeader>
@@ -69,7 +74,9 @@ function App() {
 
       <AppMain>
         <AppContent>
-          <MainPowerBar> barra </MainPowerBar>
+          <MainPowerBar> 
+            <PowerBar value={power} />
+          </MainPowerBar>
           <MainDescription> descrição </MainDescription>
           <MainPlayers> players </MainPlayers>
         </AppContent>

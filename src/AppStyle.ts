@@ -97,7 +97,9 @@ export const AppContent = styled.div`
 export const MainPowerBar = styled.main`
     width: 100%;
     height: 33.33%;
-    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 `;
 
 export const MainDescription = styled.main`
