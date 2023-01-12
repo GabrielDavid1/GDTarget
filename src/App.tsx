@@ -1,6 +1,3 @@
-//React
-import { useReducer } from "react";
-
 //Styles
 import {
   AppHeader,
@@ -21,30 +18,9 @@ import "./styles/global.css";
 
 //Components
 import Card from "./components/Card/Card";
-
-function init(initialCount: number) {
-  return {
-    count: initialCount,
-  };
-}
-
-function reducer(state: any, action: any) {
-  switch (action.type) {
-    case "increment":
-      return { count: state.count + 1 };
-    case "decrement":
-      return { count: state.count - 1 };
-    case "reset":
-      return init(action.payload);
-    default:
-      throw new Error();
-  }
-}
+import { Wind } from "./components/Wind";
 
 function App() {
-  const value:number = 1.1;
-  const direction = (value > 0) ? '>>' : '<<';
-  const wind:string = direction+value+direction;
   return (
     <AppContainer>
       <AppHeader>
@@ -53,7 +29,7 @@ function App() {
         </TitleArea>
         <SectionArea>
           <DesignComplement />
-          <SubTitle> {wind.replace("-", "")} </SubTitle>
+          <SubTitle> {Wind(0)} </SubTitle>
         </SectionArea>
       </AppHeader>
 
