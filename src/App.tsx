@@ -42,9 +42,9 @@ function reducer(state: any, action: any) {
 }
 
 function App() {
-  const initialCount = 0;
-  const [state, dispatch] = useReducer(reducer, initialCount, init);
-
+  const value:number = 1.1;
+  const direction = (value > 0) ? '>>' : '<<';
+  const wind:string = direction+value+direction;
   return (
     <AppContainer>
       <AppHeader>
@@ -53,7 +53,7 @@ function App() {
         </TitleArea>
         <SectionArea>
           <DesignComplement />
-          <SubTitle> vento </SubTitle>
+          <SubTitle> {wind.replace("-", "")} </SubTitle>
         </SectionArea>
       </AppHeader>
 

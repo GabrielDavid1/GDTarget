@@ -47,6 +47,11 @@ export const SubTitle = styled.div`
     height: 100%;
     background-color: ${theme.colors.MAIN};
     border-top-left-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Inter', sans-serif;
+    font-size: ${theme.fonts.WIND_TITLE.size};
 `;
 
 export const AppAside = styled.aside`
