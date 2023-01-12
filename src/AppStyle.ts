@@ -16,7 +16,7 @@ export const AppHeader = styled.header`
 `;
 
 export const TitleArea = styled.div`
-    width: 15%;
+    width: 15.1%;
     display: flex;
     height: 100%;
     justify-content: center;
