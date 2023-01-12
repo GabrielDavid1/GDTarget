@@ -19,7 +19,7 @@ export const theme = {
             style: 'italic',
             weight: 'bold'
         },
-        TIME_TEXT: {
+        DESCRIPTION_TEXT: {
             color: '#A3A3A6',
             size: '4rem',
             style: 'bold'

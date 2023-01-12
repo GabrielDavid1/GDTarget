@@ -13,6 +13,9 @@ import {
   HeaderTitle,
   AppAsideHeader,
   AppAsideContent,
+  MainPowerBar,
+  MainDescription,
+  MainPlayers,
 } from "./AppStyle";
 import "./styles/global.css";
 
@@ -65,7 +68,11 @@ function App() {
       </AppAside>
 
       <AppMain>
-        <AppContent></AppContent>
+        <AppContent>
+          <MainPowerBar> barra </MainPowerBar>
+          <MainDescription> descrição </MainDescription>
+          <MainPlayers> players </MainPlayers>
+        </AppContent>
         <AppFooter></AppFooter>
       </AppMain>
     </AppContainer>

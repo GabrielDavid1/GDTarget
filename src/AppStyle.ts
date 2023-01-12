@@ -85,10 +85,31 @@ export const AppMain = styled.main`
     height: 100%;
 `;
 
-export const AppContent = styled.main`
+export const AppContent = styled.div`
     width: 100%;
     height: 70%;
     background-color: ${theme.colors.MAIN};
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+`;
+
+export const MainPowerBar = styled.main`
+    width: 100%;
+    height: 33.33%;
+    background-color: red;
+`;
+
+export const MainDescription = styled.main`
+    width: 100%;
+    height: 33.33%;
+    background-color: yellow;
+`;
+
+export const MainPlayers = styled.main`
+    width: 100%;
+    height: 33.33%;
+    background-color: purple;
 `;
 
 export const AppFooter = styled.main`
