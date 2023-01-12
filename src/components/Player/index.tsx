@@ -8,17 +8,19 @@ interface StylePlayerProps {
 }
 
 interface Props {
+    angle: number;
+    power?: number;
     percent_life:string;
     stylePlayer?: StylePlayerProps;
 }
 
-export default function PlayerComponent({ percent_life, stylePlayer }:Props) {
+export default function PlayerComponent({ angle, percent_life, stylePlayer }:Props) {
     return (
         <>
          <PlayerContainer stylePlayer={stylePlayer}>
              {percent_life}
          </PlayerContainer>
-         {stylePlayer ? <RangeArea /> : null}
+         {stylePlayer ? <RangeArea angle={angle} /> : null}
         </>
     );
 }

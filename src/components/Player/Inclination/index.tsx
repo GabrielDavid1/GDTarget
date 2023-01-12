@@ -1,28 +1,28 @@
 import { InclinationWrapper } from "./styles";
 
 interface Props {
-    angle: number;
-    setAngle: React.Dispatch<React.SetStateAction<number>>;
+    isVertically:boolean;
+    state: number;
+    setState: React.Dispatch<React.SetStateAction<number>>;
 }
 
-export default function Inclination({ angle, setAngle }:Props) {
-  const position = `
-    -${document.documentElement.clientHeight*0.12}px
-  `;
+export default function Inclination({ isVertically, state, setState }:Props) {
   const handleAngle = (e:React.ChangeEvent<HTMLInputElement>) => {
-    setAngle(Number(e.target.value))
+    setState(Number(e.target.value))
   } 
   return (
-    <InclinationWrapper top={position}>
+    <> 
+    <InclinationWrapper isVertically={isVertically}>
       <input 
         className="inclination" 
         type="range" 
         min="0" 
         max="90" 
-        value={angle}
+        value={state}
         onChange={handleAngle}
         data-vertical="true"
        />
     </InclinationWrapper>
+    </>
   );
 }

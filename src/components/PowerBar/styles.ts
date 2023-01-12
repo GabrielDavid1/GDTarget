@@ -5,7 +5,7 @@ export const ProgressBar = styled.progress`
     width: 25%;
     height: 10%;
     border-radius: 2px;
-    background: white;
+    background-color: white;
     accent-color: red;
     -webkit-appearance: none;
     &::-moz-progress-bar {

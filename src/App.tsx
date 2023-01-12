@@ -29,9 +29,11 @@ import { Wind } from "./components/Wind";
 import PowerBar from "./components/PowerBar";
 import Description from './components/Description';
 import PlayerComponent from './components/Player';
+import Inclination from './components/Player/Inclination';
 
 function App() {
-  const [power, setPower] = useState<number>(0);
+  const [power, setPower] = useState<number>(2);
+  const [angle, setAngle] = useState<number>(1);
   const [toggle, setToggle] = useState<boolean>(true);
   return (
     <AppContainer>
@@ -79,7 +81,12 @@ function App() {
       <AppMain>
         <AppContent>
           <MainPowerBar> 
-            <PowerBar value={power} isVisible={false} />
+            <PowerBar value={power} isVisible={true} />
+            <Inclination 
+              isVertically
+              state={power} 
+              setState={setPower} 
+            />
           </MainPowerBar>
 
           <MainDescriptionArea> 
@@ -87,8 +94,14 @@ function App() {
           </MainDescriptionArea>
 
           <MainPlayers> 
+            <Inclination 
+              isVertically={false}
+              state={angle} 
+              setState={setAngle} 
+            />
             <PlayerArea>
               <PlayerComponent
+                angle={angle}
                 percent_life="100%"
                 stylePlayer={{
                   playerTextColor:'#565707',
@@ -97,6 +110,7 @@ function App() {
                 }}
               />
               <PlayerComponent
+                angle={angle}
                 percent_life="100%"
                 stylePlayer={undefined}
               />
