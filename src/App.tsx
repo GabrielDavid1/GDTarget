@@ -17,7 +17,7 @@ import {
   AppAsideHeader,
   AppAsideContent,
   MainPowerBar,
-  MainDescription,
+  MainDescriptionArea,
   MainPlayers,
 } from "./AppStyle";
 import "./styles/global.css";
@@ -26,9 +26,11 @@ import "./styles/global.css";
 import Card from "./components/Card/Card";
 import { Wind } from "./components/Wind";
 import PowerBar from "./components/PowerBar";
+import Description from './components/Description';
 
 function App() {
   const [power, setPower] = useState<number>(0);
+  const [toggle, setToggle] = useState<boolean>(false);
   return (
     <AppContainer>
       <AppHeader>
@@ -37,7 +39,7 @@ function App() {
         </TitleArea>
         <SectionArea>
           <DesignComplement />
-          <SubTitle> {Wind(0)} </SubTitle>
+          <SubTitle> {Wind(1)} </SubTitle>
         </SectionArea>
       </AppHeader>
 
@@ -75,10 +77,16 @@ function App() {
       <AppMain>
         <AppContent>
           <MainPowerBar> 
-            <PowerBar value={power} />
+            <PowerBar value={power} isVisible />
           </MainPowerBar>
-          <MainDescription> descrição </MainDescription>
-          <MainPlayers> players </MainPlayers>
+
+          <MainDescriptionArea> 
+            {toggle ? <Description /> : null}
+          </MainDescriptionArea>
+
+          <MainPlayers> 
+            players 
+          </MainPlayers>
         </AppContent>
         <AppFooter></AppFooter>
       </AppMain>

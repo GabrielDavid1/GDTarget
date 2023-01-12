@@ -50,7 +50,7 @@ export const SubTitle = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: ${theme.fonts.WIND_TITLE.size};
 `;
 
@@ -58,6 +58,8 @@ export const AppAside = styled.aside`
     width: 13.12%;
     height: 100%;
     background-image: ${theme.colors.ASIDE};
+    position: relative;
+    z-index: 1;
 `;
 
 export const AppAsideHeader = styled.div`
@@ -99,13 +101,15 @@ export const MainPowerBar = styled.main`
     height: 33.33%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
 `;
 
-export const MainDescription = styled.main`
+export const MainDescriptionArea = styled.main`
     width: 100%;
     height: 33.33%;
-    background-color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
 `;
 
 export const MainPlayers = styled.main`

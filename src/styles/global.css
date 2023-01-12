@@ -5,5 +5,23 @@
 
 body {
   margin: 0 auto;
-  overflow-y: hidden;
+  overflow: hidden;
+}
+
+@keyframes show-up {
+  0% {
+      transform: translateX(1000px);
+  }
+  100% {
+      transform: translateX(0);
+  }
+}
+
+@keyframes disappear {
+  0% {
+      transform: translateX(0);
+  }
+  100% {
+      transform: translateX(-1000px);
+  }
 }
