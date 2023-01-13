@@ -17,10 +17,9 @@ export default function Inclination({ isVertically, state, setState }:Props) {
         className="inclination" 
         type="range" 
         min="0" 
-        max="90" 
+        max={(isVertically) ? 85 : 81} 
         value={state}
         onChange={handleAngle}
-        data-vertical="true"
        />
     </InclinationWrapper>
     </>

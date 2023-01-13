@@ -7,7 +7,7 @@ interface Props {
 
 const PowerBar = ({value, isVisible}:Props) => ( 
     (isVisible) 
-       ? <ProgressBar value={value} max="100" /> 
+       ? <ProgressBar value={value} max="81" /> 
        : null
 );
 

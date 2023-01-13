@@ -36,3 +36,10 @@ export const PlayerContainer = styled.div<Props>`
     }` };
     z-index:1;
 `;
+
+export const LifeContainer = styled.div<Props>`
+    height: 50%;
+    background-color: ${({ stylePlayer }) => `${
+        (stylePlayer) ? stylePlayer.playerBgColor : theme.elements.AI_ENEMY.color
+    }` };
+`;

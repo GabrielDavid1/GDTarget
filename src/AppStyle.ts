@@ -24,6 +24,8 @@ export const TitleArea = styled.div`
     color: ${theme.fonts.HEADER_TITLE.color}; 
     background-color: ${theme.colors.HEADER};
     font-size: ${theme.fonts.HEADER_TITLE.size};
+    position: relative;
+    z-index: 2;
 `;
 
 export const HeaderTitle = styled.h2`
@@ -40,6 +42,8 @@ export const DesignComplement = styled.div`
     width: 100%;
     height: 100%;
     background-color: ${theme.colors.HEADER};
+    position:relative;
+    z-index: 2;
 `;
 
 export const SubTitle = styled.div`

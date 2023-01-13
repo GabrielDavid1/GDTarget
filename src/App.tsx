@@ -1,5 +1,5 @@
 //React
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 //Styles
 import {
@@ -32,9 +32,34 @@ import PlayerComponent from './components/Player';
 import Inclination from './components/Player/Inclination';
 
 function App() {
-  const [power, setPower] = useState<number>(2);
-  const [angle, setAngle] = useState<number>(1);
-  const [toggle, setToggle] = useState<boolean>(true);
+  const [wind, setWind] = useState<number>(1);
+  const [power, setPower] = useState<number>(0);
+  const [angle, setAngle] = useState<number>(0);
+
+  const [toggleShowMessage, setToggleShowMessage] = useState<boolean>(false);
+  const [toggleAtackEvent, setToggleAtackEvent] = useState<boolean>(false);
+
+  const [round, setRound] = useState<number>(0);
+
+  function handleAtackEvent() {
+    setToggleAtackEvent(!toggleAtackEvent);
+    setTimeout(() => {
+      setWind(1);
+      setPower(0);
+      setAngle(0);
+    }, 4000);
+  }
+
+  useEffect(() => {
+    if(round > 0) {
+      setToggleShowMessage(true);
+      setTimeout(() => {
+        setRound(round+1);
+        setToggleShowMessage(false);
+      }, 100000);
+    }
+  }, [round]);
+
   return (
     <AppContainer>
       <AppHeader>
@@ -43,7 +68,7 @@ function App() {
         </TitleArea>
         <SectionArea>
           <DesignComplement />
-          <SubTitle> {Wind(0)} </SubTitle>
+          <SubTitle> {Wind(wind)} </SubTitle>
         </SectionArea>
       </AppHeader>
 
@@ -90,7 +115,7 @@ function App() {
           </MainPowerBar>
 
           <MainDescriptionArea> 
-            {toggle ? <Description /> : null}
+            {toggleShowMessage ? <Description /> : null}
           </MainDescriptionArea>
 
           <MainPlayers> 
@@ -101,23 +126,32 @@ function App() {
             />
             <PlayerArea>
               <PlayerComponent
+                wind={wind}
                 angle={angle}
+                power={power}
                 percent_life="100%"
                 stylePlayer={{
                   playerTextColor:'#565707',
                   playerBgColor:'#FEFFB9',
                   playerBorderColor:'#FCFF5A',
                 }}
+                toggleAtackEvent={toggleAtackEvent}
               />
               <PlayerComponent
+                wind={wind}
                 angle={angle}
+                power={power}
                 percent_life="100%"
                 stylePlayer={undefined}
+                toggleAtackEvent={toggleAtackEvent}
               />
             </PlayerArea> 
           </MainPlayers>
         </AppContent>
-        <AppFooter></AppFooter>
+        <AppFooter>
+                <button onClick={() => setRound(1)}>iniciar</button>
+                <button onClick={handleAtackEvent}>atacar</button>
+        </AppFooter>
       </AppMain>
     </AppContainer>
   );
